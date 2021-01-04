@@ -1,0 +1,5 @@
+<div class="articles-container" *ngIf="articles?.length">
+  <div *ngFor="let article of articles">
+    <app-article-thumbnail [article]="article"></app-article-thumbnail>
+  </div>
+</div>

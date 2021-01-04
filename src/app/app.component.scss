@@ -1,0 +1,35 @@
+#polemos-header {
+  padding: 2px 12px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
+  background: #fff;
+  height: 55px;
+  z-index: 3;
+  box-sizing: border-box;
+  top: 0;
+  transition: all 0.4s;
+  margin-bottom: 50px;
+}
+
+.header-responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language-picker {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    height: 24px;
+  }
+}
+
+.brand-image {
+  height: 40px;
+}
+
+.brand-link {
+  padding-right: 50px;
+}
