@@ -1,4 +1,10 @@
-<div class="articles-container" *ngIf="articles?.length">
+<div
+  class="articles-container"
+  infiniteScroll
+  (scrolled)="onScroll()"
+  [infiniteScrollDistance]="1"
+  *ngIf="articles?.length"
+>
   <div *ngFor="let article of articles">
     <app-article-thumbnail [article]="article"></app-article-thumbnail>
   </div>

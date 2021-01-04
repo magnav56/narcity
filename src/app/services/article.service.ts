@@ -4,6 +4,16 @@ import { IArticle } from '../models/article';
 
 const baseURL = 'https://www.narcity.com';
 
+export interface ArticlesHttpResponse {
+  articles: IArticle[];
+  context: string;
+  culture: CultureType;
+  language: LanguageType;
+  live: string;
+  since: number;
+  title: string;
+}
+
 export enum LanguageType {
   fr = 'fr',
   en = 'en',
@@ -24,7 +34,7 @@ export class ArticleService {
     pageNumber: number,
     language: LanguageType,
     culture: CultureType
-  ): Promise<IArticle[]> {
+  ): Promise<ArticlesHttpResponse> {
     return this.http
       .get<any>(`${baseURL}/_homepage.json?page=${pageNumber}`, {
         headers: {

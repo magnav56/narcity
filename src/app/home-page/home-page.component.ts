@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { IArticle } from '../models/article';
 import {
@@ -13,16 +14,31 @@ import {
 })
 export class HomePageComponent implements OnInit {
   public articles: IArticle[] = [];
+  private currentPage = 1;
 
   constructor(private readonly articleService: ArticleService) {}
 
   public async ngOnInit(): Promise<void> {
-    const response = (await this.articleService.getArticles(
-      1,
+    this.articles = await this.getArticles();
+    this.currentPage++;
+  }
+
+  public onScroll(): void {
+    this.appendArticles();
+  }
+
+  private async appendArticles(): Promise<void> {
+    const articles = await this.getArticles();
+    this.currentPage++;
+    this.articles.push(...articles);
+  }
+
+  private async getArticles(): Promise<IArticle[]> {
+    const response = await this.articleService.getArticles(
+      this.currentPage,
       LanguageType.fr,
       CultureType.ca
-    )) as any;
-    this.articles = response.articles;
-    console.log(this.articles);
+    );
+    return response.articles;
   }
 }
