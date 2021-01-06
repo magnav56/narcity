@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArticleService, LanguageType } from './services/article.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class AppComponent {
   public selectedLanguage: LanguageType = LanguageType.fr;
   public LanguageType = LanguageType;
 
-  constructor(private readonly articleService: ArticleService) {}
+  constructor(
+    private readonly articleService: ArticleService,
+    private readonly router: Router
+  ) {}
 
   public toggleLanguage(): void {
     if (this.selectedLanguage === LanguageType.en) {
@@ -20,5 +24,7 @@ export class AppComponent {
       this.selectedLanguage = LanguageType.en;
     }
     this.articleService.languageSelectedSubject.next(this.selectedLanguage);
+    window.scrollTo(0, 0);
+    this.router.navigate(['/']);
   }
 }
