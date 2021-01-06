@@ -1,0 +1,10 @@
+<div
+  class="article-reader"
+  infiniteScroll
+  (scrolled)="onScroll()"
+  [infiniteScrollDistance]="1"
+>
+  <ng-container *ngFor="let article of articles">
+    <app-article [article]="article"></app-article>
+  </ng-container>
+</div>

@@ -1,3 +1,5 @@
+import { CultureType, LanguageType } from '../services/article.service';
+
 interface IEdition {
   id: string;
   level: number;
@@ -23,7 +25,7 @@ interface IAuthor {
   slug: string;
 }
 
-export interface IArticle {
+export interface IArticleThumbnail {
   id: string;
   headline: string;
   subtitle: string;
@@ -41,6 +43,39 @@ export interface IArticle {
   publishedDate: string;
   lang: string;
   featuredImage: string;
+  editions: IEdition[];
+  author: IAuthor;
+}
+
+export interface IArticle {
+  id: string;
+  headline: string;
+  subtitle: string;
+  seoheadline: string;
+  seosubtitle: string;
+  markup: string;
+  viaURLOnly: false;
+  disableamp: false;
+  nsfw: false;
+  agegate: false;
+  totalComments: number;
+  totalCommentsAndReplies: number;
+  commentsdisabled: false;
+  publishedDate: string;
+  tags: [];
+  lastUpdated: string;
+  isSponsored: false;
+  shares: 0;
+  lang: LanguageType;
+  culture: CultureType;
+  path: string;
+  featuredImage: {
+    id: string;
+    url: string;
+    sizedUrl: string;
+    artistname: string;
+    artisturl: string;
+  };
   editions: IEdition[];
   author: IAuthor;
 }

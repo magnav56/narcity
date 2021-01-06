@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IArticle } from '../models/article';
+import { IArticleThumbnail } from '../models/article';
 
 @Component({
   selector: 'app-article-thumbnail',
@@ -7,5 +7,5 @@ import { IArticle } from '../models/article';
   styleUrls: ['./article-thumbnail.component.scss'],
 })
 export class ArticleThumbnailComponent {
-  @Input() public article: IArticle;
+  @Input() public article: IArticleThumbnail;
 }

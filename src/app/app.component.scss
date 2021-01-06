@@ -1,13 +1,29 @@
+$header-height: 55px;
+
+.app-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-gap {
+  height: 0px;
+  position: sticky !important;
+  top: 0;
+  z-index: 5;
+}
+
 #polemos-header {
   padding: 2px 12px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.13);
   background: #fff;
-  height: 55px;
+  height: $header-height;
   z-index: 3;
   box-sizing: border-box;
   top: 0;
   transition: all 0.4s;
-  margin-bottom: 50px;
+  display: block;
 }
 
 .header-responsive {
@@ -32,4 +48,8 @@
 
 .brand-link {
   padding-right: 50px;
+}
+
+.margin-top {
+  margin-top: $header-height + 10px;
 }

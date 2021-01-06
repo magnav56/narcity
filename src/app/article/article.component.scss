@@ -1,0 +1,66 @@
+::ng-deep {
+  .pullquote-a {
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-image: url("https://www.narcity.com/u/2020/06/12/9e49867720775aa68e92ebbd1b2dce6f.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  article.polemos-article .body .pullquote-a-a p {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 20%;
+    padding-top: 30px;
+    color: #ff2634;
+  }
+  article.polemos-article .body .pullquote-a-b p {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 120%;
+  }
+  article.polemos-article .body .pullquote-a-c p {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 80%;
+    text-transform: uppercase;
+    color: #ff2634;
+  }
+  .numberstemplate-a {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-image: url("https://www.narcity.com/u/2020/06/12/b2c03cab7087ae472e6c3cccbd81f982.png");
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-size: cover;
+  }
+  article.polemos-article .body .numberstemplate-a-a p {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    padding-top: 20px;
+    line-height: 1em;
+  }
+  article.polemos-article .body .numberstemplate-a-b p {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ff2634;
+    display: inline-block;
+    line-height: 2em;
+  }
+}

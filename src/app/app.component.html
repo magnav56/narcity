@@ -1,21 +1,25 @@
-<header id="polemos-header">
-  <div class="header-responsive">
-    <a href="/" class="brand-link"
-      ><img
-        class="brand-image"
-        alt=""
-        src="https://www.narcity.com/u/2019/08/26/6a2fb12ec1104d722904ab989c127f2d.png"
-    /></a>
-    <div class="language-picker" (click)="toggleLanguage()">
-      <img
-        *ngIf="selectedLanguage === LanguageType.fr"
-        src="https://www.narcity.com/u/2019/04/06/b6ef88364d6bd4052a6446f5d95d090b.png"
-      />
-      <img
-        *ngIf="selectedLanguage === LanguageType.en"
-        src="https://www.narcity.com/u/2019/04/06/1974bd95eca18942b0b2fdf1857fa07f.png"
-      />
-    </div>
+<div class="app-content">
+  <div class="header-gap">
+    <header id="polemos-header">
+      <div class="header-responsive">
+        <a href="/" class="brand-link"
+          ><img
+            class="brand-image"
+            alt=""
+            src="https://www.narcity.com/u/2019/08/26/6a2fb12ec1104d722904ab989c127f2d.png"
+        /></a>
+        <div class="language-picker" (click)="toggleLanguage()">
+          <img
+            *ngIf="selectedLanguage === LanguageType.fr"
+            src="https://www.narcity.com/u/2019/04/06/b6ef88364d6bd4052a6446f5d95d090b.png"
+          />
+          <img
+            *ngIf="selectedLanguage === LanguageType.en"
+            src="https://www.narcity.com/u/2019/04/06/1974bd95eca18942b0b2fdf1857fa07f.png"
+          />
+        </div>
+      </div>
+    </header>
   </div>
-</header>
-<app-home-page></app-home-page>
+  <router-outlet class="margin-top"></router-outlet>
+</div>

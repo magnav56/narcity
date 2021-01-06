@@ -1,0 +1,25 @@
+<article class="polemos-article">
+  <div class="article-info-strip strip-ctx-top">
+    <h1 class="headline">
+      {{ article.headline }}
+    </h1>
+    <h2 class="subtitle">{{ article.subtitle }}</h2>
+    <div class="info">
+      <div class="author">
+        <address>
+          <span class="author">{{ article.author?.displayname }}</span>
+        </address>
+        <span class="publish-date"
+          >Published {{ article.publishedDate | date: "MMMM d, y" }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="featured-image">
+    <img alt="Article Featured Image" src="{{ article.featuredImage?.url }}" />
+  </div>
+  <div class="body">
+    <div [innerHTML]="article.markup"></div>
+  </div>
+  <div class="report-wrapper"></div>
+</article>
